@@ -1,0 +1,18 @@
+{
+    "title": "EKZ Energy Tariffs",
+    "config": {
+        "step": {
+            "user": {
+                "title": "Set up EKZ Energy Tariffs",
+                "description": "Set up your EKZ Energy Tariffs integration. The integration will fetch new tariff data daily at the specified time.",
+                "data": {
+                    "update_time": "Time to fetch new tariff data (HH:MM)"
+                }
+            }
+        },
+        "error": {
+            "invalid_update_time": "Invalid time format. Please use HH:MM format (e.g., 18:00)",
+            "unknown": "Unexpected error occurred"
+        }
+    }
+}

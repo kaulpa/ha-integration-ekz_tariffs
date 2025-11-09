@@ -1,0 +1,10 @@
+{
+  "domain": "ekz_tariffs",
+  "name": "EKZ Energy Tariffs",
+  "codeowners": ["@vansummeren"],
+  "config_flow": true,
+  "documentation": "https://github.com/vansummeren/ha-integration-ekz_tariffs",
+  "iot_class": "cloud_polling",
+  "requirements": ["aiohttp"],
+  "version": "1.0.0"
+}
