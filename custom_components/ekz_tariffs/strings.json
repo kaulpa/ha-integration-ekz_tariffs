@@ -1,0 +1,28 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "EKZ Energy Tariffs Configuration",
+        "description": "Configure the EKZ Energy Tariffs integration",
+        "data": {
+          "update_time": "Update Time (HH:MM)",
+          "customer_number": "Customer Number (optional)"
+        }
+      }
+    },
+    "error": {
+      "cannot_connect": "Cannot connect to EKZ API",
+      "invalid_auth": "Invalid authentication",
+      "invalid_time_format": "Invalid time format (use HH:MM)"
+    },
+    "abort": {
+      "already_configured": "EKZ Energy Tariffs is already configured"
+    }
+  },
+  "service": {
+    "refresh_tariff_data": {
+      "name": "Refresh Tariff Data",
+      "description": "Manually refresh the energy tariff data"
+    }
+  }
+}

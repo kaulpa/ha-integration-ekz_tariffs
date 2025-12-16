@@ -1,10 +1,12 @@
 {
   "domain": "ekz_tariffs",
   "name": "EKZ Energy Tariffs",
-  "codeowners": ["@vansummeren"],
+  "codeowners": ["@kaulpa"],
   "config_flow": true,
-  "documentation": "https://github.com/vansummeren/ha-integration-ekz_tariffs",
+  "documentation": "https://github.com/kaulpa/ha-integration-ekz_tariffs",
+  "issue_tracker": "https://github.com/kaulpa/ha-integration-ekz_tariffs/issues",
   "iot_class": "cloud_polling",
   "requirements": ["aiohttp"],
-  "version": "1.0.0"
+  "version": "1.0.0",
+  "homeassistant": "2024.1.0"
 }

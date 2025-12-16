@@ -17,12 +17,33 @@ A custom integration for Home Assistant that fetches energy tariff data from EKZ
 
 ## Installation
 
-1. Copy the `custom_components/ekz_tariffs` folder to your Home Assistant's `custom_components` directory
-2. Restart Home Assistant
-3. Go to Configuration > Integrations
-4. Click the "+" button to add a new integration
+### Option 1: Installation via HACS (Recommended)
+
+1. Install [HACS](https://hacs.xyz) in your Home Assistant instance if not already installed
+2. Open HACS in Home Assistant
+3. Click on "Integrations"
+4. Click the "+" button in the bottom right corner
 5. Search for "EKZ Energy Tariffs"
-6. Configure the time when the integration should fetch new data (default is 18:00)
+6. Click on the result and select "Install"
+7. Restart Home Assistant
+8. Go to Settings > Devices & Services > Integrations
+9. Click the "+" button to add a new integration
+10. Search for "EKZ Energy Tariffs" and follow the configuration steps
+
+### Option 2: Manual Installation
+
+1. Download the latest release from [GitHub](https://github.com/kaulpa/ha-integration-ekz_tariffs/releases)
+2. Copy the `ekz_tariffs` folder from `custom_components` to your Home Assistant's `custom_components` directory
+3. Restart Home Assistant
+4. Go to Settings > Devices & Services > Integrations
+5. Click the "+" button to add a new integration
+6. Search for "EKZ Energy Tariffs" and follow the configuration steps
+
+### Configuration
+
+After installation:
+1. Set the update time (when to fetch new data each day, default is 18:00)
+2. Optionally provide your customer number (if required for your tariff data)
 
 ## Available Entities
 

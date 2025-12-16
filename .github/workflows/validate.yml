@@ -1,0 +1,36 @@
+name: Validate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          pip install homeassistant flake8 isort black
+
+      - name: Run isort
+        run: isort custom_components/ekz_tariffs --check-only
+
+      - name: Run black
+        run: black custom_components/ekz_tariffs --check
+
+      - name: Run flake8
+        run: flake8 custom_components/ekz_tariffs --max-line-length=88
+
+      - name: Validate manifest
+        run: |
+          python -m homeassistant.util.validate_manifest \
+            custom_components/ekz_tariffs/manifest.json
