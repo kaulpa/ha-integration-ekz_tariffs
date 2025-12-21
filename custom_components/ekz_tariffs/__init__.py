@@ -73,7 +73,7 @@ async def async_setup_entry(hass: HomeAssistant, entry: ConfigEntry) -> bool:
                             
                             # Get main price (integrated CHF/kWh) for sorting and primary value
                             integrated_kwh = next(
-                                (p["value"] for p in period["integrated"] if p["unit"] == "CHF/kWh"),
+                                (p["value"] for p in period["integrated"] if p["unit"] in ["CHF/kWh", "CHF_kWh"]),
                                 None
                             )
                             
